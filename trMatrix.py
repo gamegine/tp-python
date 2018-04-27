@@ -5,10 +5,12 @@ matrix = [
 ]
 def transpose (m):
     r = []
-    for x in range(0,len(m)):
-        r.append([m[0][x]])
-    for x in range(0,len(m)):
+    """for x in range(0,len(m)):
+        r.append([m[0][x]])"""
+    """for x in range(0,len(m)):
         for y in range(1,len(m[0])):
-            r[x].append(m[y][x])
+            r[x].append(m[y][x])"""
+    [ r.append([m[0][x]])  for x in range(0,len(m)) ]
+    [ r[x].append(m[y][x]) for x in range(0,len(m)) for y in range(1,len(m[0])) ]
     return r
 print(transpose(matrix))
