@@ -1,5 +1,5 @@
 class FuncClass:
-    def say():
+    def say(): # not need init
         print("init is not need")
 
 FuncClass.say()
@@ -9,7 +9,7 @@ class MSG:
     #self is curent obj
     def say(self):
         print(self.msg)
-#MSG.say() need init
+#MSG.say() need init class
 m = MSG()
 m.say()
 MSG.say(m)
