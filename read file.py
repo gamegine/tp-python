@@ -1,4 +1,5 @@
 import csv
+import json
 with open('autolib-disponibilite-temps-reel.csv', 'r',encoding="utf8") as csvfile:
 #csvfile = open('autolib-disponibilite-temps-reel.csv', 'r')
     ar ={}
@@ -9,4 +10,4 @@ with open('autolib-disponibilite-temps-reel.csv', 'r',encoding="utf8") as csvfil
                 ar[row[12]]=int(row[1])
             else:
                 ar[row[12]]+=int(row[1])
-    print(ar)
+print(json.dumps(ar, indent=2))
